@@ -1,6 +1,7 @@
 import { Flex, Text } from "@radix-ui/themes";
+import type { Education } from "../data/resume.interface";
 
-export default function Education({ education }) {
+export default function Education({ education } : { education : Education}) {
 
     return (
         <Flex py="1" direction="column">

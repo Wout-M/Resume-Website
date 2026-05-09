@@ -2,8 +2,9 @@ import MailIcon from "../components/icons/MailIcon";
 import GithubIcon from "../components/icons/GithubIcon";
 import LinkedInIcon from "../components/icons/LinkedInIcon";
 import GlobeIcon from "../components/icons/GlobeIcon";
+import type { Resume } from "./resume.interface";
 
-export const resume_data = {
+export const resume_data: Resume = {
     name: "Wout Mergaerts",
     description: ".NET Developer focused on making fun projects",
     about: "I've been interested in programming and tinkering since childhood, making Java mods for Minecraft and creating projects with an Arduino. This got me into volunteering with CoderDojo in high school and going for an IT degree in college. Since 2020 I've been working as a .NET developer while making fun projects with .NET or React on the side.",
@@ -26,7 +27,7 @@ export const resume_data = {
             url: "https://www.linkedin.com/in/wout-mergaerts/"
         }
     ],
-    experience: [
+    experiences: [
         {
             company: "BiCA AG",
             link: "https://www.cirrusoft.com",

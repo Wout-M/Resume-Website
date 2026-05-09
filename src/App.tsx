@@ -5,7 +5,6 @@ import Project from './components/Project'
 import Skill from './components/Skill'
 import Work from './components/Work'
 import { Avatar, Box, Button, Flex, Grid, Heading, Link, Text } from '@radix-ui/themes'
-
 import { resume_data } from './data/data'
 
 export default function App() {
@@ -36,7 +35,7 @@ export default function App() {
       </Box>
       <Box mt="4" mb="2">
         <Heading mb="1" size="4">Experience</Heading>
-        {resume_data.experience.map(work => (
+        {resume_data.experiences.map(work => (
           <Work work={work} key={work.company} />
         ))}
       </Box>

@@ -1,7 +1,8 @@
 import { Badge, Card, Flex, Link, Text } from "@radix-ui/themes";
+import type { Project } from "../data/resume.interface";
 
-export default function Project({ project }) {
-    let technologies = project.technologies.map(tech => <Badge color="gray" key={tech}>{tech}</Badge>)
+export default function Project({ project } : { project : Project }) {
+    const technologies = project.technologies.map(tech => <Badge color="gray" key={tech}>{tech}</Badge>)
 
     return (
         <Card>
