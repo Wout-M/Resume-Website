@@ -52,7 +52,7 @@ export default function App() {
           <Flex direction="column" gap="2">
             {resume_data.languages.map(language => (
               <Text size="2" key={language.name}>
-                {language.name}: {language.level}
+                <b>{language.name}:</b> {language.level}
               </Text>
             ))}
           </Flex>
