@@ -1,6 +1,7 @@
 import { Flex, Text } from "@radix-ui/themes";
+import type { Certificate } from "../data/resume.interface";
 
-export default function Certificate({ certificate }) {
+export default function Certificate({ certificate } : { certificate: Certificate }) {
 
     return (
         <Flex direction="column">

@@ -1,7 +1,8 @@
 import { Badge, Flex, Link, Text } from "@radix-ui/themes";
+import type { Experience } from "../data/resume.interface";
 
-export default function Work({ work }) {
-    let technologies = work.technologies.map(tech => <Badge color="gray" key={tech}>{tech}</Badge>)
+export default function Work({ work } :  { work: Experience }) {
+    const technologies = work.technologies.map(tech => <Badge color="gray" key={tech}>{tech}</Badge>)
 
     return (
         <Flex py="1" direction="column">

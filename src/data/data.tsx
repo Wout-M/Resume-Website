@@ -2,8 +2,9 @@ import MailIcon from "../components/icons/MailIcon";
 import GithubIcon from "../components/icons/GithubIcon";
 import LinkedInIcon from "../components/icons/LinkedInIcon";
 import GlobeIcon from "../components/icons/GlobeIcon";
+import type { Resume } from "./resume.interface";
 
-export const resume_data = {
+export const resume_data: Resume = {
     name: "Wout Mergaerts",
     description: ".NET Developer focused on making fun projects",
     about: "I've been interested in programming and tinkering since childhood, making Java mods for Minecraft and creating projects with an Arduino. This got me into volunteering with CoderDojo in high school and going for an IT degree in college. Since 2020 I've been working as a .NET developer while making fun projects with .NET or React on the side.",
@@ -26,15 +27,33 @@ export const resume_data = {
             url: "https://www.linkedin.com/in/wout-mergaerts/"
         }
     ],
-    experience: [
+    experiences: [
+        {
+            company: "BiCA AG",
+            link: "https://www.cirrusoft.com",
+            start: "Since Sep. 2024",
+            end: "",
+            title: ".NET Developer",
+            description: "Started as a .NET developer in the team creating new funcionality for the Backoffice side of the Cirrus web application in Anglar & .NET Core. Also created a system that creates and compares snapshots daily for millions of records. Implemented a source generator that generates strongly-typed localization based on JSON resource files. Since September 2025, moved to the PoS (Point of Sale) team to create customer-facing functionalities in Angular & .NET Core.",
+            technologies: ["C#", "TypeScript", ".NET Core", "Angular", "Entity Framework Core", "SQL Server", "CI/CD", "REST API", "xUnit"]
+        },
+         {
+            company: "TechFirm Information Systems",
+            link: "https://www.techfirm.ch/en/home-en",
+            start: "Since Sep. 2024",
+            end: "",
+            title: ".NET Consultant",
+            description: "Client: BiCA AG",
+            technologies: []
+        },
         {
             company: "Build-Software",
             link: "https://build-software.eu",
-            start: "Since Sep. 2020",
-            end: "",
-            title: ".NET Developer → Integrations Team Lead",
-            description: "Started as .NET developer implementing new functionality in VB.NET or C#. Quickly moved on to bigger projects like integrations with external apps & APIs, refactoring for performance improvements & maintainability and migrating from .NET Framework to .NET Core. Since 2023 I'm leading the team responsible for integrations with Outlook & Sharepoint (through Graph), planning software and various accounting programs.",
-            technologies: ["C#/VB.NET/.NET", "Entity Framework (Core)", "Winforms", "SQL Server", "Blazor", "REST API"]
+            start: "Sep. 2020",
+            end: "Sep.2024",
+            title: ".NET Developer → Team Lead",
+            description: "Started as .NET developer implementing new functionality in VB.NET or C#. Quickly moved on to bigger projects like integrations with external apps & APIs, refactoring for performance improvements & maintainability and migrating from .NET Framework to .NET Core. Since 2023, I'm leading the team responsible for integrations with Outlook & Sharepoint (through Graph), planning software and various accounting programs. Since 2024, I'm leading the team responsible for creating future projects for Build-Software like a Blazor web application and a .NET MAUI mobile application.",
+            technologies: ["C#", "VB.NET", ".NET Framework", ".NET Core", "Entity Framework (Core)", "Winforms", "SQL Server", "Blazor", ".NET MAUI", "REST API", "Graph", "Microservices", "Scrum"]
         },
         {
             company: "Brainjar",
@@ -44,16 +63,7 @@ export const resume_data = {
             title: "Internship: Objective scoring in sport",
             description: "Research if scoring in dressage is possible with Pose Estimation. To make the research easier, I also created a web application with Docker, Flask & React to easily upload and annonate videos.",
             technologies: ["Python", "DeepLabCut", "Docker", "React", "Flask"]
-        },
-        {
-            company: "Bpost",
-            link: "https://www.bpost.be",
-            start: "Jul. 2018",
-            end: "Aug. 2018",
-            title: "Summer job: Postman",
-            description: "Sorting & delivering letters and packages by bicycle and van.",
-            technologies: []
-        },
+        }
     ],
     education: [
         {
@@ -65,15 +75,9 @@ export const resume_data = {
         {
             school: "Western Norway University of Applied Sciences",
             degree: "Erasmus semester: Advanced Web Applications, Machine Learning & Advanced Algorithms, Selected Topics in ICT",
-            start: "Aug 2019",
+            start: "Aug. 2019",
             end: "Dec. 2019"
-        },
-        {
-            school: "Group T",
-            degree: "Bachelor of Engineering Technology",
-            start: "2016",
-            end: "2017"
-        },
+        }
     ],
     certificates: [
         {
@@ -101,10 +105,19 @@ export const resume_data = {
         {
             area: "Desktop",
             skills: [
-                "C#/VB.NET/.NET",
-                "Entity Framework (Core)",
-                "Winforms",
+                "C#",
+                "VB",
+                "Python",
+                "Java",
                 "SQL Server",
+                "ASP.NET",
+                ".NET Core",
+                ".NET Framework",
+                "Entity Framework (Core)",
+                "WPF",
+                "Winforms",
+                "xUnit",
+                "FluentValidation"
             ]
         },
         {
@@ -113,9 +126,11 @@ export const resume_data = {
                 "Blazor",
                 "MAUI",
                 "React",
+                "Angular",
                 "JavaScript",
-                "HTML5",
-                "CSS3"
+                "TypeScript",
+                "HTML",
+                "CSS"
             ]
         },
         {
@@ -124,23 +139,40 @@ export const resume_data = {
                 "Git",
                 "CI/CD Pipelines",
                 "Docker",
-                "Windows",
-                "Linux",
+                "Podman",
+                "Azure",
+                "DevOps",
             ]
         },
+        {
+            area: "Principles",
+            skills: [
+                "Microservices Architecture",
+                "Clean Architecture",
+                "Test-Driven Development",
+                "Behavior-Driven Development",
+                "Domain-Driven Design",
+                "SOLID",
+                "Clean Code"
+            ]
+        }
     ],
     languages: [
         {
             name: "Dutch",
-            level: "Mother Tongue"
+            level: "Native"
         },
         {
             name: "English",
-            level: "C1"
+            level: "Full Professional"
+        },
+        {
+            name: "German",
+            level: "Intermediate/Professional"
         },
         {
             name: "French",
-            level: "B2"
+            level: "Limited Working"
         }
     ],
     projects: [
@@ -153,31 +185,31 @@ export const resume_data = {
         {
             name: "Face Snake",
             description: "Play the famous Snake game using the position of your face in the camera.",
-            technologies: ["React", "Javascript", "Tensorflow.js", "Material-UI"],
+            technologies: ["React", "JavaScript", "Tensorflow.js", "Material-UI"],
             link: "https://face-snake.netlify.app"
         },
         {
             name: "Portfolio Website",
             description: "A portfolio website made with React & Radix",
-            technologies: ["React", "Javascript", "Radix", "Netlify"],
+            technologies: ["React", "JavaScript", "Radix", "Netlify"],
             link: "https://woutmergaerts.netlify.app/"
         },
         {
             name: "KGB Bot",
             description: "A Dicord bot that keeps track of deleted/edited messages for admins of servers that also has some fun games for members.",
-            technologies: ["Discord.NET", "Quartz.NET", ".NET 6", "Docker"],
+            technologies: ["Discord.NET", "Quartz.NET", ".NET 8", "Docker"],
             link: "https://github.com/Wout-M/Discord-Net-Bots"
         },
         {
             name: "Wanderer Bot",
             description: "A Discord bot for a fantasy themed reading server of a famous YouTuber. Sorts people in their respective guilds.",
-            technologies: ["Discord.NET", "Quartz.NET", ".NET 6", "Docker"],
+            technologies: ["Discord.NET", "Quartz.NET", ".NET 8", "Docker"],
             link: "https://github.com/Wout-M/Discord-Net-Bots"
         },
         {
             name: "ExWi Bot",
             description: "A Discord bot for the server of the science department of the university of Bern that keeps track of deleted/edited messages & sorts people in their respective degrees.",
-            technologies: ["Discord.NET", ".NET 6", "Docker"],
+            technologies: ["Discord.NET", ".NET 8", "Docker"],
             link: "https://github.com/Wout-M/Discord-Net-Bots"
         }
     ]
